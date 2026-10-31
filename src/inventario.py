@@ -7,7 +7,9 @@ def clasificar_stock(stock_actual: int, stock_minimo: int) -> str:
 
     if stock_actual == 0:
         return "AGOTADO"
-
+    
+    if stock_actual > stock_minimo * 3:
+        return "EXCESIVO"
     if stock_actual <= stock_minimo * 0.5:
         return "CRITICO"
 

@@ -16,3 +16,6 @@ def test_stock_normal():
 def test_stock_invalido():
     with pytest.raises(ValueError):
         clasificar_stock(-2, 20)
+
+def test_stock_excesivo():
+    assert clasificar_stock(70, 20) == "EXCESIVO"
